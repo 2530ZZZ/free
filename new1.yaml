@@ -31,24 +31,24 @@ rule-providers:
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
     include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|Ƶ��|����|ISP|����|����|����
-    name: ⚖️ n来源-n代理-n目标
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: 鈿栵笍 n鏉ユ簮-n浠ｇ悊-n鐩爣
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: round-robin
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
     include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|ƵµÀ|¶©Ԅ|ISP|Á÷Á¿|µ½ƚ|֘փ
-    name: ⚖️ n来源-1代理-1目标
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频碌脌|露漏詣|ISP|脕梅脕驴|碌陆茪|謽謨
+    name: 鈿栵笍 n鏉ユ簮-1浠ｇ悊-1鐩爣
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
     strategy: consistent-hashing
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
     include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|ƵµÀ|¶©Ԅ|ISP|Á÷Á¿|µ½ƚ|֘փ
-    name: ⚖️ 1来源-1代理-1目标
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频碌脌|露漏詣|ISP|脕梅脕驴|碌陆茪|謽謨
+    name: 鈿栵笍 1鏉ユ簮-1浠ｇ悊-1鐩爣
     type: load-balance
     url: http://www.google.com/generate_204
     interval: 300
@@ -56,7 +56,5 @@ proxy-groups:
 
 rules:
   - "RULE-SET,private,DIRECT"
-  - "RULE-SET,geolocation-!cn,PROXY"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
-  - "MATCH,PROXY"
