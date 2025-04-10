@@ -1,0 +1,210 @@
+proxies:
+  - client-fingerprint: chrome
+    name: "\U0001F1E6\U0001F1EA阿拉伯酋长国1 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 443
+    server: 188.114.97.3
+    tls: true
+    type: vless
+    udp: true
+    uuid: 72d7ab94-4849-4a27-a840-ece6c8b53355
+    ws-opts:
+      headers:
+        Host: bestvpn-7qp.pages.dev
+        User-Agent: >-
+          Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.17
+          (KHTML, like Gecko) Chrome/10.0.649.0 Safari/534.17
+      path: /LpzVdXD0ymOpZWeV?ed=2560flow=-udp443
+    xudp: true
+    servername: bEstvpn-7Qp.pagES.dEV
+  - name: "\U0001F1F9\U0001F1FC台湾1 | ⬇️ 2.1MB/s"
+    network: ws
+    port: 443
+    server: 18.167.37.206
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+    ws-opts:
+      headers:
+        Host: edccy.ambercc.filegear-sg.me
+      path: /?ed=2560&proxyip=ts.hpc.tw
+    servername: edccy.ambercc.filegear-sg.me
+  - name: "\U0001F1F9\U0001F1FC台湾2 | ⬇️ 3.3MB/s"
+    network: ws
+    port: 25002
+    server: 211.194.201.60
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+    ws-opts:
+      headers:
+        Host: edccy.ambercc.filegear-sg.me
+      path: /?ed=2560&proxyip=ts.hpc.tw
+    servername: edccy.ambercc.filegear-sg.me
+  - client-fingerprint: chrome
+    name: "\U0001F1EB\U0001F1F7法国1 | ⬇️ 1.9MB/s"
+    password: e91906e7-9fbc-47e5-aa29-65eb5be63408
+    port: 38833
+    server: fr2.stablepod1.top
+    skip-cert-verify: false
+    type: trojan
+    udp: true
+    sni: fr2.stablepod1.top
+  - client-fingerprint: chrome
+    name: "\U0001F1EB\U0001F1F7法国2 | ⬇️ 1.6MB/s"
+    password: 37bc2a65-485c-4303-bcfd-697acf75b0ea
+    port: 38833
+    server: fr2.stablepod1.top
+    skip-cert-verify: false
+    type: trojan
+    udp: true
+    sni: fr2.stablepod1.top
+  - client-fingerprint: chrome
+    name: "\U0001F1E8\U0001F1ED瑞士1 | ⬇️ 1.8MB/s"
+    network: ws
+    port: 443
+    server: cloudgetservice.mcloudservice.site
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5ce807ba-54f1-4799-b7b6-c67a5fdf9e0e
+    ws-opts:
+      headers:
+        Host: maxnETVipAp.nEtKh3.sitE
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/62.0.3202.89 Safari/537.36
+      path: /linkws?ed=2560flow=-udp443
+    xudp: true
+    servername: maxnETVipAp.nEtKh3.sitE
+  - name: "\U0001F1E6\U0001F1FA澳大利亚1 | ⬇️ 2.2MB/s"
+    network: ws
+    port: 80
+    server: 45.131.4.188
+    type: vless
+    udp: true
+    uuid: c5293efa-28f8-4a0f-8f34-541078970cee
+    ws-opts:
+      headers:
+        Host: gozargah.validbv7996.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile
+          Safari/537.36
+      path: /
+    xudp: true
+  - name: "\U0001F1F9\U0001F1FC台湾3 | ⬇️ 1.7MB/s"
+    network: ws
+    port: 443
+    server: 43.156.116.194
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+    ws-opts:
+      headers:
+        Host: edccy.ambercc.filegear-sg.me
+      path: /?ed=2560&proxyip=ts.hpc.tw
+    servername: edccy.ambercc.filegear-sg.me
+  - client-fingerprint: chrome
+    name: "\U0001F1FA\U0001F1F8美国1 | ⬇️ 1.4MB/s"
+    network: ws
+    port: 443
+    server: 199.34.228.178
+    tls: true
+    type: vless
+    udp: true
+    uuid: 2fec7227-9abe-46f2-af18-78302b836c45
+    ws-opts:
+      headers:
+        Host: 3u.2031.pp.ua
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 5.1; A1601 Build/LMY47I)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile
+          Safari/537.36
+      path: /qF5dXhCllosLcFpqdDoAgkondVWl
+    xudp: true
+    servername: 3u.2031.pp.ua
+proxy-providers:
+  health-check: null
+enable: true
+url: 'https://www.gstatic.com/generate_204'
+interval: 600
+timeout: 1000
+persistent: true
+disable-udp: true
+max-failed: 3
+rule-providers:
+  private:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_domain:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_ip:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
+    path: ./ruleset/cn_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+proxy-groups:
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png'
+    include-all: true
+    name: PROXY
+    type: select
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png'
+    include-all: true
+    name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    strategy: round-robin
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png'
+    include-all: true
+    name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    strategy: consistent-hashing
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png'
+    include-all: true
+    name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    strategy: sticky-sessions
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'RULE-SET,geolocation-!cn,PROXY'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - 'MATCH,PROXY'
