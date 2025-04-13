@@ -1,0 +1,145 @@
+
+
+external-controller: 127.0.0.1:9090
+geodata-mode: true  # 启用 GeoIP 解析  filter中可使用以下3个参数  country 通过节点IP查询MaxMind数据库    city 需要liteip2city扩展数据库    asn 自治系统号 (AS12345)
+
+
+# 订阅源配置 (核心部分)
+proxy-providers:
+  provider1:                # 自定义订阅名称  必须，如provider1，不能重复，建议不要和策略组名称重复
+    type: http              # 指明provider的类型  必须，可选http / file / inline
+    path: ./huancun.yaml    # 本地缓存路径  可选，文件路径，不可重复，不填写时会使用 url 的 MD5 作为此文件的文件名,由于安全问题，此路径将限制只允许在 HomeDir(有启动参数 -d 配置) 中，如果想存储到任意位置配置环境变量 SKIP_SAFE_PATH_CHECK=1
+    url: https://raw.githubusercontent.com/2530ZZZ/free/refs/heads/main/mihomo.yaml    # 订阅链接  上面的"type"值为http则需要配置
+    interval: 3600          # 多久更新provider(订阅链接)一次，单位为秒
+    
+    # 节点存储控制
+    persistent-file: "/var/clash/tmp_nodes.db"
+    nodes-retention: 24h  # 仅保留24小时内节点
+    max-nodes-history: 200 # 最多存储200个历史节点
+    
+     # 元数据测速过滤,此过滤内容必须是订阅节点中包含这些数据才可以筛选 (Mihomo特有语法)
+   #filter: | (history_delay.avg < 800) && (bandwidth.download > 2)  # 单位MB/s
+   
+    health-check:           # 健康检查 (延迟测试)
+      enable: true          # 是否启用，可选 true/false
+      url: https://www.gstatic.com/generate_204    #健康检查地址
+      trigger: "subscription_updated"  # 事件触发 订阅更新后立即检查（需Mihomo ≥1.18.0）   会重置定时器interval
+      interval: 300         # 健康检查间隔时间，单位为秒
+      lazy: false           # 懒惰状态，默认为true:不使用该集合节点时，不进行测试
+      timeout: 2000         # 超时阈值(ms)全局变量
+      passing-score: 80%    # 合格分数线
+      batch_size: "{{ min(20,env.CPU_CORES * 3) }}"  # 多少个节点并行检查 20是设置的硬性上限阈值  env.CPU_CORES * 5按CPU核心数动态调整
+      batch_interval: 0.5   # 间隔(秒) = 平均单节点检查耗时 × 0.6
+      
+      # 节点状态存储控制,快速恢复有效节点,存在磁盘中
+      persistent: true
+      state-file: "/var/clash/hc_states.db"
+      state-ttl: 6h       # 健康状态保留6小时
+      max-failed-records: 3000 # 每个节点最多存5条失败记录
+      shard-by: node      # 按节点分片存储 (需要 v2.6+ 版本)
+      per-shard-limit: 50 # 每个分片最多存50条
+      max-failed: 3         # 连续失败3次剔除(标记不可用,订阅文件内容由订阅源决定,所以只是标记而非删除节点)
+      
+      #存储历史检查数据,用于分析历史性能存在内存中,重启丢失重测
+      history-storage:
+        enable: true
+        path: "/var/clash/health_history.db"
+        size: 15            # 保留最近15次记录
+        expire: 24h         # 数据有效期
+        precision: 3        # 数值精度（小数位数）
+    
+      #方法
+      methods:
+        #存活状态检测（即alive字段）   节点alive状态是由 http/tcp/udp 方法 决定
+        - type: "http"      # 基础连通性检测,http    本地→节点→目标→节点→本地  全链路应用层延迟    真实浏览体验模拟
+          url: "https://www.gstatic.com/generate_204"
+          timeout: 1500     # 超时阈值(ms)局部变量
+          weight: 60%       # 在综合评分中占比60%
+
+        #性能评分方法(speed/latency)仅影响history数据  将结果记录在history中，供策略组（如load-balance）在选择节点时参考  不影响alive(存活)状态
+        #即使 speed 检测失败，只要存活检测通过，节点仍保持 alive: true
+        - type: "speed"     # 带宽测速检测 (Mihomo特有)
+          url: "http://speedtest.tele2.net/10MB.zip"
+          size: 10MB
+          timeout: 10000    # 超时阈值(ms)局部变量
+          min-speed: 1MB/s
+          weight: 40%       # 占比40%
+          
+      # 存储碎片整理
+      storage-optimization: 
+        enable: true
+        auto-vacuum: true    # 启用SQLite自动清理
+        compress-level: 3    # Zstandard压缩等级
+
+# 规则集配置(可选)
+rule-providers:
+  private:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_domain:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_ip:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
+    path: ./ruleset/cn_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+
+# 代理节点组(策略组)配置
+proxy-groups:
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
+    include-all: true
+    name: PROXY
+    type: select
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+      
+  - name: ⚖️ n来源-n代理-n目标
+    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
+    type: load-balance
+    url: https://www.gstatic.com/generate_204
+    interval: 300                   # 组级独立检测
+    strategy: round-robin
+    
+  - name: ⚖️ n来源-1代理-1目标
+    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
+    type: load-balance
+    url: https://www.gstatic.com/generate_204
+    interval: 300                   # 组级独立检测
+    strategy: consistent-hashing
+    
+  - name: ⚖️ 1来源-1代理-1目标
+    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
+    type: load-balance
+    url: https://www.gstatic.com/generate_204
+    interval: 300                   # 组级独立检测
+    strategy: sticky-sessions
+
+# 路由规则
+# 规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
+# 如请求为 udp，而代理节点没有 udp 支持 (例如ss节点没写udp: true),则会继续向下匹配
+rules:
+  - "RULE-SET,private,DIRECT"                # "RULE-SET"引用规则集合，需配置rule-providers
+  - "RULE-SET,geolocation-!cn,PROXY"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT"
+  - "MATCH,PROXY"
