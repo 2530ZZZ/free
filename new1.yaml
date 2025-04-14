@@ -1,145 +1,138 @@
+#geodata-mode: true  # 启用 GeoIP 解析  filter中可使用以下3个参数  country 通过节点IP查询MaxMind数据库    city 需要liteip2city扩展数据库    asn 自治系统号 (AS12345)
 
 
-external-controller: 127.0.0.1:9090
-geodata-mode: true  # 启用 GeoIP 解析  filter中可使用以下3个参数  country 通过节点IP查询MaxMind数据库    city 需要liteip2city扩展数据库    asn 自治系统号 (AS12345)
-
-
-# 订阅源配置 (核心部分)
+# ===============订阅源配置 (核心部分)==============
 proxy-providers:
-  provider1:                # 自定义订阅名称  必须，如provider1，不能重复，建议不要和策略组名称重复
-    type: http              # 指明provider的类型  必须，可选http / file / inline
-    path: ./huancun.yaml    # 本地缓存路径  可选，文件路径，不可重复，不填写时会使用 url 的 MD5 作为此文件的文件名,由于安全问题，此路径将限制只允许在 HomeDir(有启动参数 -d 配置) 中，如果想存储到任意位置配置环境变量 SKIP_SAFE_PATH_CHECK=1
-    url: https://raw.githubusercontent.com/2530ZZZ/free/refs/heads/main/mihomo.yaml    # 订阅链接  上面的"type"值为http则需要配置
-    interval: 3600          # 多久更新provider(订阅链接)一次，单位为秒
-    
-    # 节点存储控制
-    persistent-file: "/var/clash/tmp_nodes.db"
-    nodes-retention: 24h  # 仅保留24小时内节点
-    max-nodes-history: 200 # 最多存储200个历史节点
-    
-     # 元数据测速过滤,此过滤内容必须是订阅节点中包含这些数据才可以筛选 (Mihomo特有语法)
-   #filter: | (history_delay.avg < 800) && (bandwidth.download > 2)  # 单位MB/s
-   
-    health-check:           # 健康检查 (延迟测试)
-      enable: true          # 是否启用，可选 true/false
-      url: https://www.gstatic.com/generate_204    #健康检查地址
-      trigger: "subscription_updated"  # 事件触发 订阅更新后立即检查（需Mihomo ≥1.18.0）   会重置定时器interval
-      interval: 300         # 健康检查间隔时间，单位为秒
-      lazy: false           # 懒惰状态，默认为true:不使用该集合节点时，不进行测试
-      timeout: 2000         # 超时阈值(ms)全局变量
-      passing-score: 80%    # 合格分数线
-      batch_size: "{{ min(20,env.CPU_CORES * 3) }}"  # 多少个节点并行检查 20是设置的硬性上限阈值  env.CPU_CORES * 5按CPU核心数动态调整
-      batch_interval: 0.5   # 间隔(秒) = 平均单节点检查耗时 × 0.6
-      
-      # 节点状态存储控制,快速恢复有效节点,存在磁盘中
-      persistent: true
-      state-file: "/var/clash/hc_states.db"
-      state-ttl: 6h       # 健康状态保留6小时
-      max-failed-records: 3000 # 每个节点最多存5条失败记录
-      shard-by: node      # 按节点分片存储 (需要 v2.6+ 版本)
-      per-shard-limit: 50 # 每个分片最多存50条
-      max-failed: 3         # 连续失败3次剔除(标记不可用,订阅文件内容由订阅源决定,所以只是标记而非删除节点)
-      
-      #存储历史检查数据,用于分析历史性能存在内存中,重启丢失重测
-      history-storage:
-        enable: true
-        path: "/var/clash/health_history.db"
-        size: 15            # 保留最近15次记录
-        expire: 24h         # 数据有效期
-        precision: 3        # 数值精度（小数位数）
-    
-      #方法
+  provider1:
+    type: http
+    path: ./huancun.yaml
+    url: https://gh-proxy.com/https://raw.githubusercontent.com/2530ZZZ/free/refs/heads/main/mihomo.yaml
+    interval: 3600          # 节点更新间隔(单位:秒)
+    #filter: "(history_delay.avg < 800) && (bandwidth.download > 2)"  # 正确注释位置
+
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204  # 基础检测URL
+      initial-delay: 0            # 立即启动检测
+      lazy: false                 # 禁用延迟初始化
+      interval: 30               # 检测间隔(单位:秒)
+      timeout: 2                  # 超时时间(单位:秒)
+      passing-score: 0.7          # 通过分数(小数形式)
+
+      # 批量检测参数
+      concurrency: 
+        batch: 999  # 每批检测数量
+        interval: 0ms       # 批次间隔(单位:毫秒)  0代表无间隔连续测试
+
+      #Start initial health checking的时候包含所有节点
+      proxies:
+        - include: ".*"           # 包含所有节点
+        - exclude: "DIRECT|REJECT" # 排除直连/拒绝节点
+
       methods:
-        #存活状态检测（即alive字段）   节点alive状态是由 http/tcp/udp 方法 决定
-        - type: "http"      # 基础连通性检测,http    本地→节点→目标→节点→本地  全链路应用层延迟    真实浏览体验模拟
+        - method: http        # 可用性检测
           url: "https://www.gstatic.com/generate_204"
-          timeout: 1500     # 超时阈值(ms)局部变量
-          weight: 60%       # 在综合评分中占比60%
+          timeout: 1500ms     # 明确毫秒单位
+          weight: 1         # 权重值(小数形式)
 
-        #性能评分方法(speed/latency)仅影响history数据  将结果记录在history中，供策略组（如load-balance）在选择节点时参考  不影响alive(存活)状态
-        #即使 speed 检测失败，只要存活检测通过，节点仍保持 alive: true
-        - type: "speed"     # 带宽测速检测 (Mihomo特有)
-          url: "http://speedtest.tele2.net/10MB.zip"
-          size: 10MB
-          timeout: 10000    # 超时阈值(ms)局部变量
-          min-speed: 1MB/s
-          weight: 40%       # 占比40%
-          
-      # 存储碎片整理
-      storage-optimization: 
-        enable: true
-        auto-vacuum: true    # 启用SQLite自动清理
-        compress-level: 3    # Zstandard压缩等级
+#        - method: speed       # 速度检测方法
+#          download:           # 必须声明方向
+#            url: "https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7zp"
+#            size: 5242880     # 5MB转换为字节
+#            min: 209715       # 最低0.2MB/s 0.2MB/s转换为字节/s(209715=0.2*1024*1024)
+#            threads: "{{ min(4, env.CPU_CORES) }}" # 动态线程数
+#          timeout: 10s        # 统一秒单位
+#          weight: 0.4
 
-# 规则集配置(可选)
-rule-providers:
-  private:
-    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
-    path: ./ruleset/private.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  cn_domain:
-    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
-    path: ./ruleset/cn_domain.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  geolocation-!cn:
-    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
-    path: ./ruleset/geolocation-!cn.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-  cn_ip:
-    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
-    path: ./ruleset/cn_ip.yaml
-    behavior: ipcidr
-    interval: 86400
-    format: yaml
-    type: http
+      # 存储优化
+      storage-optimization:
+        vacuum: auto          # 自动清理碎片
+        compression-level: 3  # 有效值0-9
 
-# 代理节点组(策略组)配置
+
+# ==============代理节点组(策略组)配置==================
 proxy-groups:
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
-    include-all: true
-    name: PROXY
+  #主代理组
+  - name: 🌐 PROXY
     type: select
+    include-all: true
     proxies:
       - ⚖️ n来源-n代理-n目标
-      - ⚖️ n来源-1代理-1目标
-      - ⚖️ 1来源-1代理-1目标
-      
-  - name: ⚖️ n来源-n代理-n目标
-    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
-    type: load-balance
-    url: https://www.gstatic.com/generate_204
-    interval: 300                   # 组级独立检测
-    strategy: round-robin
-    
-  - name: ⚖️ n来源-1代理-1目标
-    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
-    type: load-balance
-    url: https://www.gstatic.com/generate_204
-    interval: 300                   # 组级独立检测
-    strategy: consistent-hashing
-    
-  - name: ⚖️ 1来源-1代理-1目标
-    filter: | health.checked == true (latency < 1000) && (download_speed > 1)  # 单位MB/s
-    type: load-balance
-    url: https://www.gstatic.com/generate_204
-    interval: 300                   # 组级独立检测
-    strategy: sticky-sessions
+#      - ⚖️ n来源-1代理-1目标
+#      - ⚖️ 1来源-1代理-1目标
 
-# 路由规则
-# 规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
-# 如请求为 udp，而代理节点没有 udp 支持 (例如ss节点没写udp: true),则会继续向下匹配
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    use: [provider1]                  # 复用provider的检查配置
+    filter: > 
+       health.healthy == true
+    strategy: round-robin
+
+#  - name: ⚖️ n来源-1代理-1目标
+#    type: load-balance
+#    use: [provider1]                  # 复用provider的检查配置
+#    filter: > 
+#       health.healthy == true && 
+#       bandwidth.download > 0.1 && 
+#       latency < 1000
+#    strategy: consistent-hashing
+
+#  - name: ⚖️ 1来源-1代理-1目标
+#    type: load-balance
+#    use: [provider1]                  # 复用provider的检查配置
+#    filter: > 
+#       health.healthy == true && 
+#       bandwidth.download > 0.1 && 
+#       latency < 1000
+#    strategy: sticky-sessions
+
+# =============== 规则系统 ================
+rule-providers:
+  # 🔒私有网络
+  private:
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./rules/private.yaml
+    behavior: domain          # 🎯域名匹配
+    interval: 86400           # 🔄每日更新
+    type: http                # ✅ 必须声明类型
+    format: text              # 📜 显式声明文本格式
+    strategy: DIRECT          # 强制直连下载规则文件
+    health-check: false       # 当规则文件更新时 不触发 代理节点的健康检查 避免规则更新与节点检测产生循环依赖
+
+  # 🇨🇳国内域名
+  cn_domain:
+    type: http         # ✅ 必须声明类型,type必须首行,下同
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./rules/cn_domain.yaml
+    interval: 172800  # 🔄每2天更新
+    format: text    # 📜 显式声明文本格式
+    health-check: false       # 当规则文件更新时 不触发 代理节点的健康检查 避免规则更新与节点检测产生循环依赖
+
+  # 🌍海外域名
+  geolocation:
+    type: http         # ✅ 必须声明类型
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text    # 📜 显式声明文本格式
+    health-check: false       # 当规则文件更新时 不触发 代理节点的健康检查 避免规则更新与节点检测产生循环依赖
+
+  # 🇨🇳国内IP
+  cn_ip:
+    type: http         # ✅ 必须声明类型
+    behavior: ipcidr  # 🌐IP段匹配
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: ./rules/cn_ip.yaml
+    interval: 259200  # 🔄3天更新
+    format: text    # 📜 显式声明文本格式
+    health-check: false       # 当规则文件更新时 不触发 代理节点的健康检查 避免规则更新与节点检测产生循环依赖
+
 rules:
-  - "RULE-SET,private,DIRECT"                # "RULE-SET"引用规则集合，需配置rule-providers
-  - "RULE-SET,geolocation-!cn,PROXY"
-  - "RULE-SET,cn_domain,DIRECT"
-  - "RULE-SET,cn_ip,DIRECT"
-  - "MATCH,PROXY"
+  - RULE-SET,private,DIRECT  # 🔒私有网络直连
+  - GEOIP,CN,DIRECT  # 🇨🇳国内IP直连
+  - RULE-SET,cn_domain,DIRECT  # 🏠国内域名
+  - RULE-SET,cn_ip,DIRECT  # 🌐国内IP段
+  - RULE-SET,geolocation,🌐 PROXY  # 🌍海外流量
+  - MATCH,🌐 PROXY  # 🚦剩余流量代理
