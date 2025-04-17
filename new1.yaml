@@ -1,11 +1,4 @@
 
-# ===============订阅源配置 (核心部分)==============
-proxy-providers:
-  provider1:
-    type: http
-    path: ./huancun.yaml
-    url: https://gh-proxy.com/https://raw.githubusercontent.com/2530ZZZ/free/refs/heads/main/mihomo.yaml
-    interval: 360000          # 节点更新间隔(单位:秒)
 
 
 # ==============代理节点组(策略组)配置==================
