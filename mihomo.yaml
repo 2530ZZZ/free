@@ -1,0 +1,114 @@
+
+proxies:
+  - {"name":"🇳🇱荷兰12 | ⬇️ 1.8MB/s","type":"vmess","server":"0:0:0:0:0:ffff:9df5:4c61","port":2095,"cipher":"auto","uuid":"6ba15edd-efc5-426b-baf7-70b9c6607e26","alterId":0,"tls":false,"network":"http","http-opts":{"path":["/?JOKERRVPN_JOKERRVPN"],"headers":{"Host":["nl1.bugfreenet.biz.ddns-ip.net"]}}}
+  - {"type":"vless","name":"🌀其他2-PK | ⬇️ 3.0MB/s","server":"pk.saint.ydns.eu","port":443,"uuid":"49ed01ad-3bb4-204f-b0ff-a58f658fd618","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"4e-unF1RO2v--E7-X3aqxnCSPaK9QaTfJ7LawAr2bRI"},"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"type":"vless","name":"🇷🇺俄罗斯4 | ⬇️ 1.8MB/s","server":"in.saint.ydns.eu","port":443,"uuid":"49ed01ad-3bb4-204f-b0ff-a58f658fd618","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y"},"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"type":"vless","name":"🇸🇬新加坡5 | ⬇️ 1.5MB/s","server":"test123.zlqhdns.top","port":10778,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🇯🇵日本3 | ⬇️ 1.1MB/s","server":"shenzhou05.mysynology.net","port":35659,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"gateway.icloud.com"}
+  - {"name":"🇹🇼台湾2 | ⬇️ 2.3MB/s","type":"ss","server":"shenzhou05.mysynology.net","port":33368,"cipher":"aes-128-gcm","password":"VMhGp5wEIyCDf90T"}
+  - {"type":"vless","name":"🌀其他1-GI | ⬇️ 1.4MB/s","server":"vip.jddns0202.top","port":33832,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🇳🇱荷兰4 | ⬇️ 2.9MB/s","server":"14.102.228.75","port":2052,"uuid":"6b5080c3-c19d-5401-aa83-c557ccfec5ff","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"sPeedtest2.sbs.us.vless.sitespeedtest.net"},"path":"/vless#@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL"}}
+  - {"type":"vless","name":"🇬🇧英国2 | ⬇️ 3.3MB/s","server":"77.110.100.177","port":2083,"uuid":"2bcdbd33-321e-4a1c-bae9-d37517b694c3","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"_Mo8etwPEDo42B4BnrkX3FOaPsOv2thyIlrzg3hhDBk","short-id":"e09b0ba7d2"},"network":"grpc","grpc-opts":{"grpc-service-name":"@VPN_KING_V2RAY@VPN_KING_V2RAY@VPN_KING_V2RAY@VPN_KING_V2RAY"},"servername":"speedtest.net"}
+  - {"type":"vless","name":"🇺🇸美国2 | ⬇️ 1.8MB/s","server":"agaungzhou01.bumbleshrimp.com","port":38302,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.amazon.com"}
+  - {"type":"vless","name":"🇭🇰香港9 | ⬇️ 1.6MB/s","server":"shenzhou05.mysynology.net","port":33782,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🇷🇺俄罗斯6 | ⬇️ 1.7MB/s","server":"5.181.171.10","port":443,"uuid":"49ed01ad-3bb4-204f-b0ff-a58f658fd618","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y"},"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"type":"vless","name":"🌀其他7-LV | ⬇️ 1.5MB/s","server":"agaungzhou01.bumbleshrimp.com","port":29316,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.amazon.com"}
+  - {"type":"vless","name":"🇹🇼台湾1 | ⬇️ 1.8MB/s","server":"beiyong.dynuddns.net","port":15842,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.yahoo.com"}
+  - {"type":"vless","name":"🇺🇦乌克兰1 | ⬇️ 1.2MB/s","server":"shenzhou02.mysynology.net","port":33048,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.yahoo.com"}
+  - {"type":"vless","name":"🇯🇵日本2 | ⬇️ 1.2MB/s","server":"bsuqian01.dynu.net","port":25768,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🇯🇵日本3 | ⬇️ 1.3MB/s","server":"csuzhou01.1cooldns.com","port":13989,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"gateway.icloud.com"}
+  - {"type":"vless","name":"🌀其他7-ES | ⬇️ 1.2MB/s","server":"bsuqian01.dynu.net","port":40581,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"sni":"hk-13-568.flztjc.net","client-fingerprint":"chrome","type":"trojan","password":"2c605663-b89a-5734-a9d6-97d4743d72cf","server":"160.22.188.200","port":8313,"name":"🇭🇰香港7 | ⬇️ 3.7MB/s"}
+  - {"type":"vless","name":"🇺🇸美国1 | ⬇️ 1.2MB/s","server":"zhee01.dynu.net","port":64654,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"gateway.icloud.com"}
+  - {"type":"vless","name":"🇷🇺俄罗斯5 | ⬇️ 3.2MB/s","server":"194.147.35.138","port":55799,"uuid":"43589def-fa09-47e3-b44e-7f6e069f470d","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"LBvEFKpH7REwityPTJqYPhEJ7MaIqcuIRL01VPzcpAs","short-id":"a82b"},"network":"tcp","servername":"iranhost.com"}
+  - {"type":"vless","name":"🇺🇸美国11 | ⬇️ 1.5MB/s","server":"shenzhou05.mysynology.net","port":19620,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.amazon.com"}
+  - {"type":"vless","name":"🇫🇮芬兰3 | ⬇️ 3.0MB/s","server":"jermaine.ns.cloudflare.com","port":443,"uuid":"98e790ba-34cf-4d24-b8ce-1cb559e677a0","tls":true,"client-fingerprint":"chrome","alpn":["http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"wpxb8jk5.twentyse.com"},"path":"/wss"},"servername":"wpxb8jk5.twentyse.com"}
+  - {"type":"vless","name":"🇯🇵日本5 | ⬇️ 4.4MB/s","server":"20.210.64.11","port":443,"uuid":"6f995056-7802-4a1d-bff7-61678e626c3f","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"vsdfee.azurewebsites.net"},"path":"/fp=chrome"},"servername":"vsdfee.azurewebsites.net"}
+  - {"type":"vless","name":"🌀其他8-VN | ⬇️ 3.2MB/s","server":"test123.zlqhdns.top","port":36387,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"skip-cert-verify":true,"sni":"grateful-mako.dolphin109.quest","client-fingerprint":"chrome","type":"trojan","password":"3828095943467868160","server":"109.107.159.202","port":443,"name":"🇬🇧英国2 | ⬇️ 1.3MB/s"}
+  - {"name":"🇭🇰香港6 | ⬇️ 1.8MB/s","type":"vmess","server":"fc4de86a-sv8cg0-sv995i-xz4l.cm.plebai.net","port":15229,"cipher":"auto","uuid":"8c3ef4c2-980d-11ef-add7-f23c913c8d2b","alterId":0,"tls":false}
+  - {"type":"vless","name":"🇺🇸美国11 | ⬇️ 1.1MB/s","server":"beiyong.dynuddns.net","port":57926,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"gateway.icloud.com"}
+  - {"type":"vless","name":"🇭🇰香港1 | ⬇️ 1.2MB/s","server":"agaungzhou01.bumbleshrimp.com","port":31800,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🌀其他11-KZ | ⬇️ 1.5MB/s","server":"agaungzhou01.bumbleshrimp.com","port":11733,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🇳🇱荷兰2 | ⬇️ 1.7MB/s","server":"agaungzhou01.bumbleshrimp.com","port":50997,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.amazon.com"}
+  - {"name":"🇳🇱荷兰1 | ⬇️ 1.2MB/s","type":"vmess","server":"0:0:0:0:0:ffff:9df5:4c61","port":2095,"cipher":"auto","uuid":"6ba15edd-efc5-426b-baf7-70b9c6607e26","alterId":0,"tls":false,"network":"http","http-opts":{"path":["/"],"headers":{"Host":["nl1.bugfreenet.biz.ddns-ip.net"]}}}
+  - {"type":"vless","name":"🌀其他10-LV | ⬇️ 1.0MB/s","server":"vip.jddns0202.top","port":29316,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.amazon.com"}
+  - {"type":"vless","name":"🇭🇰香港3 | ⬇️ 1.6MB/s","server":"beiyong.dynuddns.net","port":12597,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🌀其他12-IL | ⬇️ 1.1MB/s","server":"tel5.vpntype.dev","port":443,"uuid":"caf769de-8857-4666-af09-683a6ac06b8a","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","alpn":["h2","http/1.1"],"skip-cert-verify":false,"network":"tcp","servername":"tel5.vpntype.dev"}
+  - {"type":"vless","name":"🇫🇷法国1 | ⬇️ 2.1MB/s","server":"agaungzhou01.bumbleshrimp.com","port":40072,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.yahoo.com"}
+  - {"type":"vless","name":"🇸🇬新加坡1 | ⬇️ 1.3MB/s","server":"beiyong.dynuddns.net","port":29877,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+  - {"type":"vless","name":"🌀其他6-MD | ⬇️ 1.8MB/s","server":"bsuqian01.dynu.net","port":22216,"uuid":"459b4a80-bd61-4ecd-a26b-e9c1809d9e45","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"},"network":"tcp","servername":"www.nvidia.com"}
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
