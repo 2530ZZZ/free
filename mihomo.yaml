@@ -1,0 +1,93 @@
+
+proxies:
+  - {"type":"hysteria2","name":"🇺🇸美国17 | ⬇️ 1.3MB/s","server":"108.181.5.130","port":65232,"password":"dongtaiwang.com","sni":"apple.com","skip-cert-verify":true,"tfo":false}
+  - {"type":"hysteria2","name":"🇺🇸美国31 | ⬇️ 2.1MB/s","server":"108.181.5.130","port":65232,"password":"dongtaiwang.com","sni":"apple.com","skip-cert-verify":true,"tfo":false}
+  - {"type":"vless","name":"🇳🇱荷兰2 | ⬇️ 1.5MB/s","server":"104.17.147.22","port":8443,"uuid":"96a1b724-68d2-4f4d-ab25-38ecd83577bc","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"GxVpOnLl13.pRiMeXaD.OrG"},"path":"/"},"servername":"GxVpOnLl13.pRiMeXaD.OrG"}
+  - {"type":"vless","name":"🇳🇱荷兰4 | ⬇️ 2.6MB/s","server":"snapp.ir.iraniantim.ir","port":80,"uuid":"b6c6856b-fa48-4b2d-a252-a55ed5fc3605","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"r3AUhD5_0NU00NjPOH5XdfVvZfJLmmqnt5cdH0WQsGo"},"network":"tcp","servername":"refersion.com"}
+  - {"type":"vless","name":"🇬🇧英国6 | ⬇️ 2.0MB/s","server":"213.21.245.83","port":443,"uuid":"be2b3c86-a3bf-4111-9968-6162071ac945","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"TXHciLv9Ctu7k7sdIcadLJIEa1WTCIseYctDMa6NW0c","short-id":"7e39db0c"},"network":"tcp","servername":"tgju.org"}
+  - {"type":"vless","name":"🇬🇧英国1 | ⬇️ 2.5MB/s","server":"45.8.211.230","port":443,"uuid":"838f5273-5d2d-4630-a0f5-9cc8e4aef4d6","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"CxNiMjJz.cAfUnEaR.InFo"},"path":"/"},"servername":"CxNiMjJz.cAfUnEaR.InFo"}
+  - {"type":"vless","name":"🇩🇪德国4 | ⬇️ 2.3MB/s","server":"germanmel.mehrdadsadaf.com","port":7594,"uuid":"2a219df1-a04b-4424-bfd2-cb37aeb10b2c","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"AZSptdvlWvvmKWEDTY56UsIcnTP8nGCafvPEQOozrxw","short-id":"765e8e700426816c"},"network":"grpc","grpc-opts":{"grpc-service-name":"7594vless"},"servername":"dash.cloudflare.com"}
+  - {"type":"vless","name":"🇳🇱荷兰2 | ⬇️ 1.7MB/s","server":"95.211.62.200","port":80,"uuid":"b6c6856b-fa48-4b2d-a252-a55ed5fc3605","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"r3AUhD5_0NU00NjPOH5XdfVvZfJLmmqnt5cdH0WQsGo"},"network":"tcp","servername":"refersion.com"}
+  - {"type":"vless","name":"🌀其他1-MD | ⬇️ 2.0MB/s","server":"www.speedtest.net","port":8443,"uuid":"9e769ce1-34be-4e3f-b0a6-823f30eb8f69","tls":true,"client-fingerprint":"chrome","alpn":["h3h2"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"GxTm08YfEm.SaKhRe.InFo"},"path":"/"},"servername":"GxTm08YfEm.SaKhRe.InFo"}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 2.3MB/s","server":"164.92.243.66","port":443,"uuid":"01453d95-69a8-4cb4-a5eb-f073c62f4576","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"fCdQnxkoid28t27haGSLEd3rr0R3zxw57xg40wwfU0I","short-id":"93f3face"},"network":"tcp","servername":"venom.spritbraker.ir"}
+  - {"type":"vless","name":"🌀其他8-未识别 | ⬇️ 2.7MB/s","server":"whatismyipaddress.com","port":443,"uuid":"188876dd-3e2d-4aa6-9541-9434e20d2425","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"638814719962909909.athens-pnthprx-aaaaa.info"},"path":"/kjrwzaws"},"servername":"638814719962909909.athens-pnthprx-aaaaa.info"}
+  - {"type":"vless","name":"🇫🇷法国2 | ⬇️ 2.1MB/s","server":"190.93.245.137","port":443,"uuid":"3ba9312c-19c0-4091-aa74-cc0a3e152831","tls":true,"client-fingerprint":"chrome","alpn":["h2","http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"WWW.EsfahAnsimaN.infO."},"path":"/TELEGRAM--jet_config--CANALTELEGRAM--jet_config--TELEGRAM--jet_config--CANALTELEGRAM--jet_config--TELEGRAM--jet_config"},"servername":"WWW.EsfahAnsimaN.infO."}
+  - {"type":"hysteria2","name":"🇫🇷法国3 | ⬇️ 1.2MB/s","server":"hy2-1.694463.xyz","port":4489,"password":"dongtaiwang.com","sni":"www.bing.com","skip-cert-verify":true,"tfo":false}
+  - {"type":"vless","name":"🇬🇧英国3 | ⬇️ 2.0MB/s","server":"199.34.228.41","port":443,"uuid":"838f5273-5d2d-4630-a0f5-9cc8e4aef4d6","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"CxNiMjJz.cAfUnEaR.InFo"},"path":"/"},"servername":"CxNiMjJz.cAfUnEaR.InFo"}
+  - {"type":"vless","name":"🇷🇺俄罗斯1 | ⬇️ 2.0MB/s","server":"89.23.118.93","port":443,"uuid":"588f094b-431b-422c-b80b-007945037072","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ru01.abvpn.ru"},"path":"/websocket"},"servername":"ru01.abvpn.ru"}
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
