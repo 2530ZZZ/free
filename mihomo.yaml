@@ -1,0 +1,86 @@
+
+proxies:
+  - {"type":"vless","name":"🇩🇪德国9 | ⬇️ 1.2MB/s","server":"164.92.243.66","port":443,"uuid":"01453d95-69a8-4cb4-a5eb-f073c62f4576","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"fCdQnxkoid28t27haGSLEd3rr0R3zxw57xg40wwfU0I","short-id":"93f3face"},"network":"tcp","servername":"venom.spritbraker.ir"}
+  - {"type":"vless","name":"🇨🇭瑞士1 | ⬇️ 2.0MB/s","server":"37.156.46.44","port":59536,"uuid":"5deda57d-05ae-8abb-1f38-cb94de2242e9","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"KmXtdOimd1xGGg7V2rvo74_HxMd6_bzFyosF6Z5c22A","short-id":"d6d54c08fbbf895f"},"network":"tcp","servername":"stackoverflow.com"}
+  - {"type":"vless","name":"🇳🇱荷兰7 | ⬇️ 1.5MB/s","server":"86.38.214.22","port":2052,"uuid":"17dc323b-b20f-5b1b-b670-7b71c251c3e1","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"sPeedtest2.sbs.kz.v2vless.sitespeedtest.net"},"path":"/vless#@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL"}}
+  - {"type":"vless","name":"🌀其他18-ES | ⬇️ 1.0MB/s","server":"188.42.88.109","port":2096,"uuid":"96a1b724-68d2-4f4d-ab25-38ecd83577bc","tls":true,"client-fingerprint":"chrome","alpn":["h3","h2"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"JpHzJdVn23.bLuEvIa.oRg"},"path":"/"},"servername":"JpHzJdVn23.bLuEvIa.oRg"}
+  - {"type":"vless","name":"🇬🇧英国3 | ⬇️ 1.4MB/s","server":"178.62.44.40","port":8440,"uuid":"97dda572-7ff0-4609-8388-c82be57bc6a9","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"y6JSkggQ__RA_nmCJpX1_ddSQC6vzDUPaN7KyvjVuic"},"network":"tcp","servername":"refersion.com"}
+  - {"type":"vless","name":"🌀其他5-ES | ⬇️ 1.6MB/s","server":"45.142.120.62","port":2096,"uuid":"96a1b724-68d2-4f4d-ab25-38ecd83577bc","tls":true,"client-fingerprint":"chrome","alpn":["h3","h2"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"JpHzJdVn23.bLuEvIa.oRg"},"path":"/"},"servername":"JpHzJdVn23.bLuEvIa.oRg"}
+  - {"type":"vless","name":"🇳🇱荷兰8 | ⬇️ 1.5MB/s","server":"86.38.214.22","port":2052,"uuid":"7f70f43a-f44f-53b5-825a-465be8c5e3a4","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"sPeedtest2.sbs.kz.v2vless.sitespeedtest.net"},"path":"/vless#@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL"}}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 2.3MB/s","server":"164.92.243.66","port":443,"uuid":"01453d95-69a8-4cb4-a5eb-f073c62f4576","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"fCdQnxkoid28t27haGSLEd3rr0R3zxw57xg40wwfU0I","short-id":"93f3face"},"network":"tcp","servername":"venom.spritbraker.ir"}
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
