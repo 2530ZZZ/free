@@ -1,0 +1,86 @@
+
+proxies:
+  - {"type":"vless","name":"🇩🇪德国5 | ⬇️ 1.4MB/s","server":"www.speedtest.net","port":8880,"uuid":"bc84fb97-da79-4577-9a39-4079f1bc0efc","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"de-snapp23.academigroup.ir."},"path":"/telegram---Academi_vpn--telegram--Academi_vpn--telegram--Academi_vpn--telegram--Academi_vpn--telegram----Academi_vpn--Mystic_vpn?ed=2048"}}
+  - {"sni":"e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net","type":"trojan","password":"bd77bfe8-e0f3-11ec-bd7c-f23c913c8d2b","server":"e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net","port":15229,"name":"🇺🇸美国3 | ⬇️ 1.4MB/s-1"}
+  - {"type":"vless","name":"🇩🇪德国4 | ⬇️ 1.1MB/s","server":"www.speedtest.net","port":443,"uuid":"0d0782a3-2c62-4936-b893-5790188778ea","tls":true,"client-fingerprint":"chrome","alpn":["h3","h2"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"XbU10cS9vT.gIgA1.oRg"},"path":"/"},"servername":"XbU10cS9vT.gIgA1.oRg"}
+  - {"type":"vless","name":"🇺🇸美国4 | ⬇️ 1.6MB/s","server":"104.19.223.79","port":443,"uuid":"cd2e9541-3fce-4d95-9bec-919d884f911e","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"piqie.justin-lifeistooshort.info"},"path":"/tiger"},"servername":"piqie.justin-lifeistooshort.info"}
+  - {"type":"vless","name":"🇺🇸美国3 | ⬇️ 1.4MB/s-2","server":"104.19.223.79","port":443,"uuid":"cd2e9541-3fce-4d95-9bec-919d884f911e","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"wureq.stephen-lifeistooshort.info"},"path":"/tiger"},"servername":"wureq.stephen-lifeistooshort.info"}
+  - {"type":"vless","name":"🇺🇸美国10 | ⬇️ 1.6MB/s","server":"135.84.64.208","port":443,"uuid":"d7eae7a4-052e-4ab4-98c5-0100f2e26be7","tls":true,"client-fingerprint":"chrome","alpn":["h3"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"madcity3.mianfeicf.lol"},"path":"/?ed=2560"},"servername":"madcity3.mianfeicf.lol"}
+  - {"sni":"e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net","type":"trojan","password":"bd77bfe8-e0f3-11ec-bd7c-f23c913c8d2b","server":"e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net","port":15229,"name":"🇺🇸美国3 | ⬇️ 1.4MB/s-3"}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 1.4MB/s","server":"188.244.122.224","port":2096,"uuid":"15868173-1378-4984-a4e2-07d51591b237","tls":true,"client-fingerprint":"chrome","alpn":["http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"behesht.mhxpd.ir"},"path":"/?ed=1024"},"servername":"behesht.mhxpd.ir"}
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
