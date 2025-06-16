@@ -1,0 +1,84 @@
+
+proxies:
+  - {"type":"vless","name":"🇺🇸美国10 | ⬇️ 1.6MB/s","server":"135.84.64.208","port":443,"uuid":"d7eae7a4-052e-4ab4-98c5-0100f2e26be7","tls":true,"client-fingerprint":"chrome","alpn":["h3"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"madcity3.mianfeicf.lol"},"path":"/?ed=2560"},"servername":"madcity3.mianfeicf.lol"}
+  - {"name":"🌀其他8-未识别 | ⬇️ 2.6MB/s","type":"vmess","server":"npmjs.com","port":8080,"cipher":"auto","uuid":"ms5fu66ofs","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/nasnet/cdn","headers":{"Host":"ms5fu66ofs-4515017477.mashallahbet.com"}}}
+  - {"type":"vless","name":"🇺🇸美国34 | ⬇️ 1.5MB/s","server":"cc.188122.xyz","port":41439,"uuid":"bea9338b-82eb-4aaa-a32b-1a8cf26be703","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"vX_y4uErSlsl3ftJ-VMEVviUbGJYTeMpKzfam9SDlHI","short-id":"9dfe1d83"},"network":"tcp","servername":"www.yahoo.com"}
+  - {"type":"hysteria2","name":"🇯🇵日本2 | ⬇️ 2.6MB/s","server":"ajp.pagate.top","port":10086,"password":"e6d8d743-a9bc-48c9-be99-8f3cc94d16e1","sni":"ajp.pagate.top","skip-cert-verify":false,"tfo":false}
+  - {"type":"vless","name":"🇸🇬新加坡3 | ⬇️ 3.4MB/s","server":"104.17.70.206","port":2096,"uuid":"291c27a5-34d2-4081-83cc-2196cd208148","tls":true,"client-fingerprint":"random","alpn":["h3","h2","http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"xrr.rtxconfigz.xyz"},"path":"/"},"servername":"xrr.rtxconfigz.xyz"}
+  - {"name":"🌀其他8-未识别 | ⬇️ 1.3MB/s","type":"vmess","server":"npmjs.com","port":8080,"cipher":"auto","uuid":"2u7opi5sqg","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/nasnet/cdn","headers":{"Host":"2u7opi5sqg-4515017476.mashallahbet.com"}}}
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
