@@ -1,0 +1,87 @@
+
+proxies:
+  - {"type":"hysteria2","name":"🇺🇸美国56 | ⬇️ 3.0MB/s","server":"209.141.47.127","port":3234,"password":"65a43b6e-19c5-4fab-b960-d110a07d66a4","skip-cert-verify":true,"tfo":false}
+  - {"type":"hysteria2","name":"🇷🇺俄罗斯3 | ⬇️ 1.2MB/s","server":"45.129.2.248","port":23579,"password":"dongtaiwang.com","sni":"www.bing.com","skip-cert-verify":true,"tfo":false}
+  - {"type":"vless","name":"🇫🇮芬兰4 | ⬇️ 2.4MB/s","server":"104.18.224.5","port":443,"uuid":"329d8863-42ce-4015-b9b9-8417499cc174","tls":true,"client-fingerprint":"chrome","alpn":["http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"m1.freesdns.info."},"path":"/"},"servername":"m1.freesdns.info."}
+  - {"type":"vless","name":"🇩🇪德国8 | ⬇️ 1.9MB/s","server":"140.82.37.17","port":46943,"uuid":"8a4f088d-0da9-4202-8e52-84e9488da6b1","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"8r3d33MHVnEu2hB27_AAP1kKPkay6vlOE3OxLo0FuzM","short-id":"cec81537"},"network":"grpc","grpc-opts":{"grpc-service-name":"KagrvJL8nTo9E"},"servername":"speedtest.net"}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 3.0MB/s","server":"94.141.123.233","port":443,"uuid":"ba26f084-9124-4524-add4-53fcfb928161","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"vfmqSXTEjdIOgz43eZTNzBRztAvd1U1dDkSz_mnaSk4","short-id":"fc7a526a7e61ba3b"},"network":"tcp","servername":"cdnjs.com"}
+  - {"name":"🇩🇪德国9 | ⬇️ 2.3MB/s","type":"vmess","server":"npmjs.com","port":8080,"cipher":"auto","uuid":"xymkalnrm8","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/nasnet/cdn","headers":{"Host":"xymkalnrm8-16197102189.mashallahbet.com"}}}
+  - {"sni":"dddDvvbHY7.000890604.XyZ","client-fingerprint":"chrome","alpn":["http/1.1"],"network":"ws","ws-opts":{"path":"/TDUxZUop9k44oPiit2OdWk0KwirdY"},"type":"trojan","password":"13e26f64-2e0c-4461-92cd-d83294cc18f0","server":"172.67.220.140","port":443,"name":"🇺🇸美国2 | ⬇️ 1.1MB/s"}
+  - {"type":"vless","name":"🇫🇮芬兰2 | ⬇️ 2.4MB/s","server":"cleanv2itech1.freesdns.info","port":443,"uuid":"329d8863-42ce-4015-b9b9-8417499cc174","tls":true,"client-fingerprint":"chrome","alpn":["http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"m1.freesdns.info."},"path":"/"},"servername":"m1.freesdns.info."}
+
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
