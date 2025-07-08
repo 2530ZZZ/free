@@ -1,0 +1,123 @@
+
+proxies:
+  - {"name":"🇩🇪德国9 | ⬇️ 2.3MB/s","type":"vmess","server":"npmjs.com","port":8080,"cipher":"auto","uuid":"xymkalnrm8","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/nasnet/cdn","headers":{"Host":"xymkalnrm8-16197102189.mashallahbet.com"}}}
+  - {"type":"vless","name":"🌀其他1-未识别 | ⬇️ 1.1MB/s","server":"74.49.214.177","port":8880,"uuid":"583ceab3-4022-4553-9158-9bedc625ad4e","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ip.langmanshanxi.top"},"path":"/Telegram🇨🇳 @WangCai2"},"servername":"ip.langmanshanxi.top"}
+  - {"type":"vless","name":"🌀其他2-未识别 | ⬇️ 1.6MB/s","server":"104.129.164.39","port":8880,"uuid":"583ceab3-4022-4553-9158-9bedc625ad4e","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ip.langmanshanxi.top"},"path":"/Telegram🇨🇳"},"servername":"ip.langmanshanxi.top"}
+  - {"type":"vless","name":"🇦🇪阿拉伯酋长国1 | ⬇️ 1.4MB/s","server":"5.10.214.180","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇳🇱荷兰1 | ⬇️ 1.2MB/s","server":"188.42.89.100","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/Channel id: @ShadowProxy66?ed=2560"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇸🇬新加坡1 | ⬇️ 1.8MB/s","server":"14.102.229.177","port":8880,"uuid":"583ceab3-4022-4553-9158-9bedc625ad4e","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ip.langmanshanxi.top"},"path":"/Telegram🇨🇳 @WangCai2 /?ed=2560"},"servername":"ip.langmanshanxi.top"}
+  - {"type":"vless","name":"🇳🇱荷兰4 | ⬇️ 1.5MB/s","server":"104.18.26.90","port":8080,"uuid":"TELEGRAM-NUFiLTER","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"kk25.4qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewq1234567890.pro."},"path":"/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=8880"}}
+  - {"skip-cert-verify":true,"sni":"www.baidu.com","client-fingerprint":"chrome","type":"trojan","password":"d0d08cddacc3190ea81b1b792e1b5fde","server":"36.151.251.36","port":30534,"name":"🇺🇸美国3 | ⬇️ 1.6MB/s"}
+  - {"skip-cert-verify":true,"sni":"www.baidu.com","client-fingerprint":"chrome","type":"trojan","password":"d0d08cddacc3190ea81b1b792e1b5fde","server":"36.151.192.10","port":9141,"name":"🇭🇰香港1 | ⬇️ 2.2MB/s"}
+  - {"skip-cert-verify":true,"sni":"www.baidu.com","client-fingerprint":"chrome","type":"trojan","password":"d0d08cddacc3190ea81b1b792e1b5fde","server":"36.151.251.24","port":50723,"name":"🇭🇰香港2 | ⬇️ 4.0MB/s"}
+  - {"type":"vless","name":"🇺🇸美国8 | ⬇️ 2.8MB/s","server":"135.148.152.104","port":443,"uuid":"ea286109-d20f-415e-849e-4af20ab04b65","tls":true,"client-fingerprint":"chrome","alpn":["h2","http/1.1"],"skip-cert-verify":false,"network":"tcp","servername":"147135001195.sec22org.com"}
+  - {"type":"vless","name":"🌀其他11-PH | ⬇️ 3.6MB/s","server":"31.12.75.20","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/"}}
+  - {"type":"vless","name":"🇺🇸美国10 | ⬇️ 3.8MB/s","server":"185.148.106.71","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/Telegram@vpnAndroid2/?ed=2560"}}
+  - {"type":"vless","name":"🇺🇸美国11 | ⬇️ 1.9MB/s","server":"188.42.89.20","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/"}}
+  - {"type":"vless","name":"🇳🇱荷兰8 | ⬇️ 2.1MB/s","server":"45.159.216.20","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/?ed=2560"}}
+  - {"type":"vless","name":"🇺🇸美国12 | ⬇️ 1.2MB/s","server":"5.10.214.2","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国13 | ⬇️ 1.4MB/s","server":"185.148.106.75","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/"}}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 1.8MB/s","server":"66.81.247.236","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/Channel id: @ShadowProxy66?ed=2560"}}
+  - {"type":"vless","name":"🌀其他13-PH | ⬇️ 2.7MB/s","server":"arvind.ns.cloudflare.com","port":443,"uuid":"ee6774c0-9b19-4ff1-8b30-2da4b71977e2","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"edmz.ambercc.filegear-sg.me"},"path":"/?ed=2560"},"servername":"edmz.ambercc.filegear-sg.me"}
+  - {"type":"vless","name":"🇭🇰香港3 | ⬇️ 1.6MB/s","server":"45.144.167.46","port":19816,"uuid":"6337837a-2b47-4e0d-a695-75c5a4a8ad51","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"rs-hk.lzjnb.shop"},"path":"/lzjjjj666"},"servername":"rs-hk.lzjnb.shop"}
+  - {"sni":"SsSDdDffGBNhJu.2030.Pp.Ua","client-fingerprint":"chrome","alpn":["http/1.1"],"network":"ws","ws-opts":{"path":"/UmUQq8h08wB9JsgTazwz9"},"type":"trojan","password":"da128246-33b0-4c88-a44e-d91e9e0a1e05","server":"sssdddffgbnhju.2030.pp.ua","port":443,"name":"🇺🇸美国18 | ⬇️ 2.0MB/s"}
+  - {"type":"vless","name":"🌀其他14-未识别 | ⬇️ 1.2MB/s","server":"108.165.216.177","port":8880,"uuid":"583ceab3-4022-4553-9158-9bedc625ad4e","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ip.langmanshanxi.top"},"path":"/Telegram🇨🇳@WangCai2/?ed=2560"}}
+  - {"type":"vless","name":"🇩🇪德国4 | ⬇️ 1.8MB/s","server":"66.81.247.20","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/?ed=2560"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇩🇪德国5 | ⬇️ 1.1MB/s","server":"5.10.247.178","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇩🇪德国6 | ⬇️ 1.1MB/s","server":"108.165.152.202","port":2083,"uuid":"ee6774c0-9b19-4ff1-8b30-2da4b71977e2","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"edmx.aimercc.filegear-sg.me"},"path":"/?proxyip=ts.hpc.tw"},"servername":"edmx.aimercc.filegear-sg.me"}
+  - {"type":"vless","name":"🇩🇪德国7 | ⬇️ 1.1MB/s","server":"104.25.166.3","port":80,"uuid":"telegram-id-ArV2ray","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"www.speedtest.net.a.3.speedtest2029.com."},"path":"/-Arfilter@Arfilter-TEL--@Arfilter-TEL--@Arfilter-TEL--@Arfilter-JOIN-@Arfilter-TEL--@Arfilter-JOIN-@Arfilter-TEL-@Arfilter-TEL--@Arfilter-JOIN-@Arfilter-TEL--@Arfilter?ed=80"}}
+  - {"type":"vless","name":"🇺🇸美国25 | ⬇️ 1.6MB/s","server":"45.55.97.57","port":2053,"uuid":"5509083e-5773-44df-9218-81f7f4c1ba35","tls":true,"client-fingerprint":"firefox","skip-cert-verify":false,"reality-opts":{"public-key":"Uc_szD9e636TbUBx2KpJLb5TVJS4C0brd2df8jXaeS8","short-id":"c5d2962347c6"},"network":"grpc","grpc-opts":{"grpc-service-name":"Tel:@VPN_KING_V2RAY"},"servername":"speedtest.net"}
+  - {"type":"vless","name":"🌀其他15-PH | ⬇️ 1.1MB/s","server":"45.8.211.101","port":80,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/Channel"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国27 | ⬇️ 1.6MB/s","server":"45.81.58.22","port":8880,"uuid":"b5441b0d-2147-4898-8a6a-9b2c87f58382","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"bitget1.asdasd.click"},"path":"/?ed=2560"}}
+  - {"type":"vless","name":"🇺🇸美国29 | ⬇️ 1.6MB/s","server":"45.81.58.10","port":8880,"uuid":"b5441b0d-2147-4898-8a6a-9b2c87f58382","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"bitget1.asdasd.click"},"path":"/?ed=2560"},"servername":"bitget1.asdasd.click"}
+  - {"type":"vless","name":"🇺🇸美国30 | ⬇️ 21.0MB/s","server":"143.14.220.122","port":25888,"uuid":"51450ef3-b3e3-47ba-b6c1-5bef55c60df5","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"zBmyQcuUZiHENPtX8XGvFXuN3UD74o2YQ7WpD-VUARs","short-id":"8631f9"},"network":"tcp","servername":"www.samsung.com"}
+  - {"type":"vless","name":"🇳🇱荷兰11 | ⬇️ 1.7MB/s","server":"103.133.1.20","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国31 | ⬇️ 1.0MB/s","server":"45.159.218.177","port":8880,"uuid":"583ceab3-4022-4553-9158-9bedc625ad4e","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"ip.langmanshanxi.top"},"path":"/Telegram🇨🇳 @WangCai2 /?ed=2560"}}
+  - {"type":"vless","name":"🇺🇸美国32 | ⬇️ 1.3MB/s","server":"94.247.142.3","port":8880,"uuid":"b5441b0d-2147-4898-8a6a-9b2c87f58382","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"bitget1.asdasd.click"},"path":"/"},"servername":"Telegram-channel-WangCai2"}
+  - {"type":"vless","name":"🇩🇪德国8 | ⬇️ 1.0MB/s","server":"5.10.244.204","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇳🇱荷兰12 | ⬇️ 1.9MB/s","server":"5.10.244.60","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramрЯЗ"}}
+  - {"type":"vless","name":"🇺🇸美国33 | ⬇️ 1.6MB/s","server":"5.10.247.80","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/Telegram🇨🇳"}}
+  - {"type":"vless","name":"🇩🇪德国9 | ⬇️ 2.6MB/s","server":"5.10.245.223","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国34 | ⬇️ 1.1MB/s","server":"5.10.245.185","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国35 | ⬇️ 1.2MB/s","server":"5.10.246.146","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国39 | ⬇️ 1.5MB/s","server":"5.10.244.160","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇩🇪德国10 | ⬇️ 1.0MB/s","server":"5.10.246.248","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国43 | ⬇️ 2.6MB/s","server":"5.10.214.114","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/"},"servername":"reedfree8mahsang2.redorg.ir"}
+  - {"type":"vless","name":"🇺🇸美国44 | ⬇️ 2.2MB/s","server":"5.10.214.112","port":8880,"uuid":"53fa8faf-ba4b-4322-9c69-a3e5b1555049","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"reedfree8mahsang2.redorg.ir"},"path":"/TelegramU0001F1E8U0001F1F3"},"servername":"reedfree8mahsang2.redorg.ir"}
+
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
