@@ -1,0 +1,90 @@
+proxies:
+  - {"type":"vless","name":"🇫🇮芬兰1 | ⬇️ 1.0MB/s","server":"213.165.58.213","port":443,"uuid":"c48bd63d-f4a0-42d5-9569-6ccfe5c435ed","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"wYoaKmGm40vL6L1lg-2umg9nIXUIqzPfmvw57C1fwXU","short-id":"0c0ecbe84815"},"network":"tcp","servername":"yandex.ru"}
+  - {"name":"US SS-26 | free-nodes","type":"ss","server":"tinkered-pennies-puppies.freesocks.work","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
+  - {"type":"vless","name":"US VLESS-72 | free-nodes","server":"142.248.80.157","port":443,"uuid":"4aff5de5-83dc-43c9-a33e-10e6fdb90ed2","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"Wvt6tuMcFY9rWF2BsdAD4DXgLAoxQJxHWlao2BPR23Y"},"network":"tcp","servername":"apple.com"}
+  - {"type":"vless","name":"US VLESS-73 | free-nodes","server":"198.62.62.248","port":443,"uuid":"5a4abb78-ecd7-4d68-ab2a-c11a3842f261","tls":true,"client-fingerprint":"chrome","skip-cert-verify":true,"network":"ws","ws-opts":{"headers":{"Host":"tar.alabama-tigr.info"},"path":"/love"},"servername":"tar.alabama-tigr.info"}
+  - {"type":"vless","name":"未知 VLESS-107 | free-nodes","server":"143.20.236.51","port":443,"uuid":"d65cc14c-f53f-4fe2-b262-97856601319c","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg","short-id":"c39cc7310a"},"network":"tcp","servername":"yahoo.com"}
+  - {"type":"vless","name":"🇩🇪德国1 | ⬇️ 1.5MB/s","server":"195.133.88.238","port":61809,"uuid":"899251ca-be66-4d21-84d8-bd7fbf10150b","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"0Orr9QAz2hKT1K6aKa64azrlgdh4DMkwvTRg1FacNAI","short-id":"741a96cc25132fe3"},"network":"tcp","servername":"yandex.ru"}
+  - {"type":"vless","name":"🇬🇧英国1 | ⬇️ 1.2MB/s","server":"198.62.62.235","port":443,"uuid":"5a4abb78-ecd7-4d68-ab2a-c11a3842f261","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"bank.alaska-tigr.info"},"path":"/love"},"servername":"bank.alaska-tigr.info"}
+  - {"type":"vless","name":"🇺🇸美国1 | ⬇️ 1.2MB/s","server":"198.62.62.248","port":443,"uuid":"5a4abb78-ecd7-4d68-ab2a-c11a3842f261","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"tar.alabama-tigr.info"},"path":"/love"},"servername":"tar.alabama-tigr.info"}
+
+
+
+
+
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
