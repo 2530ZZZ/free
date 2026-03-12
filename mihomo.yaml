@@ -1,0 +1,113 @@
+proxies:
+  - {"type":"vless","name":"🇳🇱荷兰1 | ⬇️ 2.3MB/s","server":"141.11.21.219","port":53458,"uuid":"de73ea62-68e4-45e2-8cc3-87c6d4b23aa0","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"tcp","servername":"a.sezar.top"}
+  - {"type":"vless","name":"未知 VLESS-107 | free-nodes","server":"143.20.236.51","port":443,"uuid":"d65cc14c-f53f-4fe2-b262-97856601319c","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg","short-id":"c39cc7310a"},"network":"tcp","servername":"yahoo.com"}
+  - {"type":"vless","name":"🇩🇪德国1 | ⬇️ 2.4MB/s","server":"45.145.42.170","port":8005,"uuid":"00000000-0000-4000-8000-000000000000","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"sub.mot.ip-ddns.com"},"path":"/"},"servername":"sub.mot.ip-ddns.com"}
+  - {"type":"vless","name":"🇺🇸美国1 | ⬇️ 2.1MB/s","server":"45.159.79.86","port":34536,"uuid":"a6e660d7-e9c3-4094-929a-da4e351099d2","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"4WGV_uewsrl85s0fzlmjjFLcUmWJU8hCeEfYPUwl00c","short-id":"34d61993a14d66"},"network":"tcp","servername":"www.icloud.com"}
+  - {"name":"🇬🇧英国1 | ⬇️ 2.1MB/s","type":"ss","server":"185.218.3.131","port":60664,"cipher":"chacha20-ietf-poly1305","password":"Aex4y92EluOwjtinhoxlsO"}
+  - {"name":"🇺🇸美国4 | ⬇️ 2.5MB/s","type":"vmess","server":"82.198.246.250","port":180,"cipher":"auto","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"tls":false}
+  - {"name":"🇺🇸美国5 | ⬇️ 2.8MB/s","type":"vmess","server":"82.198.246.46","port":180,"cipher":"auto","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"tls":false}
+  - {"type":"vless","name":"🌀其他1-EE | ⬇️ 2.7MB/s","server":"est.vles.space","port":8443,"uuid":"7f37b28b-cfcb-4c2a-ae41-8f2ddc9325dd","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"5Tz44GqhEgM6Q-kOX0WQ6voGySL5sOEeABSUsFDY8Uw","short-id":"21c7fb5ed34c260c"},"network":"tcp","servername":"sun2-16.userapi.com"}
+  - {"type":"vless","name":"🇩🇪德国1 | ⬇️ 2.7MB/s","server":"80.253.251.122","port":13686,"uuid":"8f09e644-7208-4f38-ac2f-db6d23cc647f","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"E2rSTxjCs8arrVzkG0htKf5OQt6wyoIsvwnsvkmKanQ","short-id":"fd38dd693669e822"},"network":"tcp","servername":"yandex.ru"}
+  - {"type":"vless","name":"🇺🇸美国2 | ⬇️ 2.4MB/s","server":"157.254.223.44","port":18959,"uuid":"d0b3e27d-bbfc-4a3b-8e60-6973de8fcefa","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"-hwVEdgFkvjku8ESuDoAA7id5yGGv_zXBvBW_RdhmHA","short-id":"d557c6895d014075"},"network":"tcp","servername":"itunes.apple.com"}
+  - {"type":"vless","name":"🇷🇺俄罗斯1 | ⬇️ 2.2MB/s","server":"37.139.32.124","port":443,"uuid":"8884ad85-0a42-07d0-8468-42b2b8e69df2","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"qq","skip-cert-verify":false,"reality-opts":{"public-key":"4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik","short-id":"d8c6b58bcbb0c323"},"network":"tcp","servername":"max.ru"}
+  - {"type":"vless","name":"🇳🇱荷兰3 | ⬇️ 2.0MB/s","server":"ams2.shubnechkin.online","port":443,"uuid":"7a1f4deb-0ea9-427e-bc9d-9297a08afa12","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"QQarqFQYr7LYxP_wlqWwTIgl9PE3YWgDAuYbwrsgKTo"},"network":"tcp","servername":"vk.com"}
+  - {"type":"vless","name":"🇩🇪德国2 | ⬇️ 2.3MB/s","server":"fastly2.hamrahflow.ir","port":443,"uuid":"7f93cfe7-011c-4a2d-a6f8-c2763c44f8ef","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"Fightioeror.com"},"path":"/"},"servername":"default.ssl.fastly.net"}
+  - {"type":"vless","name":"🇩🇪德国3 | ⬇️ 2.0MB/s","server":"f3.hamrahconf.ir","port":8443,"uuid":"7f93cfe7-011c-4a2d-a6f8-c2763c44f8ef","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"app-core-04.secoxi.site"},"path":"/"},"servername":"uiuyoyw.secoxi.site"}
+  - {"type":"vless","name":"🇺🇸美国3 | ⬇️ 2.2MB/s","server":"vip2.kaixincloud.top","port":8443,"uuid":"572a0d47-567c-4085-a2de-69cc41365a27","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"rncf.wwxgxn.cfd"},"path":"/sayuri"},"servername":"rncf.wwxgxn.cfd"}
+  - {"type":"vless","name":"🇸🇬新加坡2 | ⬇️ 2.4MB/s","server":"192.0.63.188","port":443,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","tls":true,"client-fingerprint":"random","alpn":["http/1.1"],"skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"snippet.fgfw.de5.net"},"path":"/danfeng"},"servername":"snippet.fgfw.de5.net"}
+  - {"type":"vless","name":"🇵🇱波兰1 | ⬇️ 2.5MB/s","server":"45.144.51.87","port":443,"uuid":"a16bd0e2-ff2e-4e4c-a955-0c684255a065","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"-YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs","short-id":"feedbacc"},"network":"tcp","servername":"pl.fasti.win"}
+  - {"name":"🇵🇱波兰2 | ⬇️ 2.4MB/s","type":"ss","server":"auto.poland.ray-vpn.ru","port":4495,"cipher":"chacha20-ietf-poly1305","password":"2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3"}
+  - {"name":"🇰🇷韩国1 | ⬇️ 2.2MB/s","type":"vmess","server":"pub.ap20260228.com","port":64097,"cipher":"auto","uuid":"a739e782-1682-38a5-9153-aad09d779ae9","alterId":0,"tls":false}
+  - {"type":"vless","name":"🇺🇸美国6 | ⬇️ 2.3MB/s","server":"usa.talon.su","port":443,"uuid":"d9e24a73-f04d-4439-a564-487ccd3cd097","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"OcVe6UD5UfGlbNjQ-c_-TGE1YItXjK3_zEi54oBdADs","short-id":"3a79810bba9c12dc"},"network":"tcp","servername":"usa.talon.su"}
+  - {"name":"🌀其他1-ZA | ⬇️ 5.3MB/s","type":"ss","server":"102.37.237.190","port":443,"cipher":"chacha20-ietf-poly1305","password":"RoHaFyD4IpW8W2LC"}
+  - {"type":"vless","name":"🇩🇪德国1 | ⬇️ 2.1MB/s","server":"109.120.189.102","port":52006,"uuid":"4fd2d5f6-d417-03e8-9331-e20afde2fcd2","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"qq","skip-cert-verify":false,"reality-opts":{"public-key":"4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik","short-id":"d8c6b58bcbb0c323"},"network":"tcp","servername":"max.ru"}
+  - {"type":"vless","name":"🇸🇬新加坡1 | ⬇️ 2.4MB/s","server":"31.133.0.135","port":2053,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","tls":true,"client-fingerprint":"random","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"snippet.fgfw.ccwu.cc"},"path":"/danfeng"},"servername":"snippet.fgfw.ccwu.cc"}
+  - {"name":"🌀其他2-LT | ⬇️ 2.1MB/s","type":"ss","server":"195.66.25.220","port":8388,"cipher":"chacha20-ietf-poly1305","password":"yhrHMDgZ2egKftvrecvkpUPqpUTyac7q"}
+  - {"type":"vless","name":"🇫🇮芬兰1 | ⬇️ 2.5MB/s","server":"45.144.53.229","port":443,"uuid":"62ad5a48-f452-4868-b7eb-d27df9b3d723","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"tcp","servername":"ficdn16.suio.me"}
+  - {"type":"vless","name":"🇸🇬新加坡3 | ⬇️ 2.9MB/s","server":"121.152.61.147","port":11371,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"network":"ws","ws-opts":{"headers":{"Host":"snippet.fgfw.de5.net"},"path":"/danfeng"},"servername":"snippet.fgfw.de5.net"}
+  - {"type":"vless","name":"🇷🇺俄罗斯1 | ⬇️ 2.1MB/s","server":"5.188.140.174","port":443,"uuid":"fba7dc74-ed99-07d0-8b5f-a822f254475f","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"qq","skip-cert-verify":false,"reality-opts":{"public-key":"4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik","short-id":"d8c6b58bcbb0c323"},"network":"tcp","servername":"max.ru"}
+  - {"type":"vless","name":"🇷🇺俄罗斯2 | ⬇️ 2.1MB/s","server":"5.188.140.174","port":443,"uuid":"8884ad85-0a42-07d0-8468-42b2b8e69df2","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"qq","skip-cert-verify":false,"reality-opts":{"public-key":"4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik","short-id":"d8c6b58bcbb0c323"},"network":"tcp","servername":"max.ru"}
+  - {"type":"vless","name":"🌀其他1-AM | ⬇️ 2.6MB/s","server":"am.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"lX1RtYvGvYlnn9sKgH_WDMkmhVQEoKHqTQVxrly1F34","short-id":"bf45"},"network":"tcp","servername":"am.vitalik.space"}
+  - {"type":"vless","name":"🇫🇷法国1 | ⬇️ 2.4MB/s","server":"3.fr.vles.space","port":23151,"uuid":"b52989b9-09dc-4ca0-b722-e6fe3e8a0313","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"safari","skip-cert-verify":false,"reality-opts":{"public-key":"eP0MKUFOcNVSVFbHT8GgBLP4LIHZFq8JuVGlCAlH1HI"},"network":"tcp","servername":"cms-res-web.online.sberbank.ru"}
+
+
+
+
+
+
+
+
+
+
+proxy-groups:
+  - name: "\U0001F310 PROXY"
+    type: select
+    include-all: true
+    proxies:
+      - ⚖️ n来源-n代理-n目标
+      - ⚖️ n来源-1代理-1目标
+      - ⚖️ 1来源-1代理-1目标
+  - name: ⚖️ n来源-n代理-n目标
+    type: load-balance
+    include-all: true
+    strategy: round-robin
+  - name: ⚖️ n来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: consistent-hashing
+  - name: ⚖️ 1来源-1代理-1目标
+    type: load-balance
+    include-all: true
+    strategy: sticky-sessions
+
+
+
+rule-providers:
+  private:
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./rules/private.yaml
+    behavior: domain
+    interval: 86400
+    type: http
+    format: text
+    strategy: DIRECT
+    health-check: false
+  cn_domain:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./rules/cn_domain.yaml
+    interval: 172800
+    format: text
+    health-check: false
+  geolocation:
+    type: http
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./rules/geolocation.yaml
+    interval: 86400
+    format: text
+    health-check: false
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./rules/cn_ip.yaml
+    interval: 259200
+    format: text
+    health-check: false
+
+
+
+
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - "RULE-SET,geolocation,\U0001F310 PROXY"
+  - "MATCH,\U0001F310 PROXY"
